@@ -75,7 +75,8 @@
                 <h2 class="text-center"><i>PRODUCT CATALOG</i></h2>
                 <div class="row" id="product-container">
                     <% products.forEach((product, index)=> { %>
-                        <div class="col-md-4 mb-4 product-card <%= index >= 3 ? 'd-none' : '' %>">
+                        <div class="col-md-4 mb-4 product-card <%= index >= 3 ? 'd-none' : '' %>" data-aos="fade-up"
+                            data-aos-duration="3000">
                             <div class="card">
                                 <img src="<%= product.image %>" class="card-img-top" alt="<%= product.name %>">
                                 <div class="card-body">
@@ -92,7 +93,7 @@
                         <% }) %>
                 </div>
                 <% if (products.length> 3) { %>
-                    <div class="justify-content-end mt-2" id="catalog-controls">
+                    <div class="d-flex justify-content-end mt-2" id="catalog-controls">
                         <button id="show-all-btn" class="btn btn-secondary">Show All</button>
                         <button id="show-less-btn" class="btn btn-secondary d-none">Show Less</button>
                     </div>

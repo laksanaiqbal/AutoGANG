@@ -69,19 +69,27 @@ body {
 .card-body {
   padding: 15px;
 }
+.product-card {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.product-card.visible {
+  opacity: 1;
+  max-height: 500px; /* Adjust based on your content */
+}
+
+.product-card.show-all {
+  max-height: 500px; /* Ensure the transition is smooth */
+}
+
+.product-card.initial {
+  opacity: 1;
+  max-height: none; /* Initial cards are always visible */
+}
+
 .d-none {
   display: none;
-}
-
-#show-all-btn,
-#show-less-btn {
-  margin: 10px;
-  /* Jarak antar tombol agar tidak terlalu berdekatan */
-}
-
-#catalog-controls {
-  /* Memastikan tombol-tombol berada di tengah dan di bawah katalog */
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
 }
